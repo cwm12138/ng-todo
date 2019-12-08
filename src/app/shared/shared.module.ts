@@ -1,23 +1,30 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatToolbarModule,MatButtonModule,MatIconModule} from '@angular/material';
+import {MatToolbarModule,MatButtonModule,MatIconModule,MatDividerModule,MatCardModule} from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HeaderComponent } from './components/header/header.component';
+import { ContentComponent } from './components/content/content.component';
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    ContentComponent
   ],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule,
+    MatDividerModule,
+    MatCardModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    ContentComponent
   ]
 })
 export class SharedModule { }
